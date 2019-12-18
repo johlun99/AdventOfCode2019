@@ -1,5 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
+
+using AdventOfCode2019.CommonCode;
 
 namespace AdventOfCode2019
 {
@@ -7,21 +10,14 @@ namespace AdventOfCode2019
     {
         static void Main(string[] args)
         {
-            int[] input = getInput("Data/day01.txt");
+            //string[,] input = getStringCsvInput("day03.txt");
+            //var input = ReadInput.getStringCsvInput("day03.txt");
 
-            int day01Res = Day01.Solution_01(input);
+            Day04.Solution02();
 
-            input = getInput("Data/day01.txt");
-            int day02Res = Day01.Solution_02(input);
 
-            Console.WriteLine(day01Res);
-            Console.WriteLine(day02Res);
+            Console.WriteLine("Done");
         }
-
-        private static int[] getInput(string path)
-        {
-            string[] rawInput = System.IO.File.ReadAllLines(@"../../../" + path);
-            return Array.ConvertAll(rawInput, int.Parse);
-        }
+        
     }
 }
